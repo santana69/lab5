@@ -10,6 +10,14 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+
+	$(".friend a").click(function(e) {
+		e.preventDefault();
+
+		var name = $(this).find("h4");
+
+		name.html(anagrammedName(name.html()));
+	})
 }
 
 function anagrammedName(name) {
